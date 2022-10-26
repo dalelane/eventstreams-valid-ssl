@@ -1,0 +1,12 @@
+apiVersion: operator.ibm.com/v1alpha1
+kind: OperandRequest
+metadata:
+  name: request-management-ingress
+spec:
+  requests:
+    - operands:
+        - name: ibm-iam-operator
+        - name: ibm-cert-manager-operator
+        - name: ibm-management-ingress-operator
+      registry: common-service
+      registryNamespace: ibm-common-services
